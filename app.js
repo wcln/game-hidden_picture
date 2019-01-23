@@ -1,5 +1,4 @@
 
-var version = 'test';
 var questions = [];
 var congratulationsText;
 
@@ -10,36 +9,47 @@ function init() {
 
   counter = 0;
 
-  // Load version JSON file.
-  $.getJSON('versions/' + version + '.json', (data) => {
+  let version = new URL(window.location.href).searchParams.get("version");
 
-    // Load questions into variable and shuffle.
-    questions = shuffle(data['questions']);
+  if (version !== null) {
 
-    if (questions.length == 16) {
+    // Load version JSON file.
+    try {
+      $.getJSON('versions/' + version + '.json', (data) => {
 
-      // Add questions to HTML.
-      shuffle($('.game-tile > .center > p')).each(function(i) {
-        $(this).html(questions[i]['answer']);
+        // Load questions into variable and shuffle.
+        questions = shuffle(data['questions']);
+
+        if (questions.length == 16) {
+
+          // Add questions to HTML.
+          shuffle($('.game-tile > .center > p')).each(function(i) {
+            $(this).html(questions[i]['answer']);
+          });
+
+          // Load first question.
+          $('#question').html(questions[counter]['question']);
+
+          // Load prompt text.
+          $("#header h1").html(data['prompt']);
+
+          // Set congratulationsText (used later).
+          congratulationsText = data['congratulations'];
+
+        } else {
+          alert('Error! There must be 16 questions exactly in the version file.');
+        }
+
       });
 
-      // Load first question.
-      $('#question').html(questions[counter]['question']);
-
-      // Load prompt text.
-      $("#header h1").html(data['prompt']);
-
-      // Set congratulationsText (used later).
-      congratulationsText = data['congratulations'];
-
-    } else {
-      alert('Error! There must be 16 questions exactly in the version file.');
+      // Add event listeners.
+      initEventListeners();
+    } catch(error) {
+        alert('Error loading ' + version + '.json');
     }
-
-  });
-
-  // Add event listeners.
-  initEventListeners();
+  } else {
+    alert('Error! No version set.');
+  }
 }
 
 function initEventListeners() {
