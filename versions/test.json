@@ -1,0 +1,70 @@
+{
+  "prompt": "Click the tile below which solves the problem:",
+  "congratulations": "Congratulations! You have solved all the problems!",
+  "questions": [
+    {
+      "question": "20 + 5",
+      "answer": "25"
+    },
+    {
+      "question": "12 + 3",
+      "answer": "15"
+    },
+    {
+      "question": "22 + 4",
+      "answer": "26"
+    },
+    {
+      "question": "11 + 2",
+      "answer": "13"
+    },
+    {
+      "question": "44 + 5",
+      "answer": "49"
+    },
+    {
+      "question": "11 + 5",
+      "answer": "16"
+    },
+    {
+      "question": "4 + 3",
+      "answer": "7"
+    },
+    {
+      "question": "1 + 4",
+      "answer": "5"
+    },
+    {
+      "question": "11 + 3",
+      "answer": "14"
+    },
+    {
+      "question": "66 + 4",
+      "answer": "70"
+    },
+    {
+      "question": "4 + 8",
+      "answer": "12"
+    },
+    {
+      "question": "34 + 2",
+      "answer": "36"
+    },
+    {
+      "question": "11 + 12",
+      "answer": "23"
+    },
+    {
+      "question": "24 + 7",
+      "answer": "31"
+    },
+    {
+      "question": "22 + 5",
+      "answer": "27"
+    },
+    {
+      "question": "7 + 4",
+      "answer": "11"
+    }
+  ]
+}
