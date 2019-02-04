@@ -29,6 +29,8 @@ body {
   display: table-cell;
   vertical-align: middle;
   padding: 4px;
+  max-width: 105px;
+  word-wrap: break-word;
 }
 
 .center {
