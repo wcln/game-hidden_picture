@@ -1,7 +1,7 @@
 {
   "prompt": "Click the tile below which solves the problem:",
   "congratulations": "Congratulations! You have solved all the problems!",
-  "font-size": "30px",
+  "font_size": "30px",
   "questions": [
     {
       "question": "20 + 5",
