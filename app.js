@@ -33,6 +33,9 @@ function init() {
           // Load prompt text.
           $("#header h1").html(data['prompt']);
 
+          // Set tile font size/
+          $(".game-tile p").css("font-size", data['font-size']);
+
           // Set congratulationsText (used later).
           congratulationsText = data['congratulations'];
 
